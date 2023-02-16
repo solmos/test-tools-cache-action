@@ -1,0 +1,24 @@
+{
+  "name": "test-tools-cache-action",
+  "version": "1.0.0",
+  "description": "Testing creating a GitHub Action for downloading and caching a folder",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solmos/test-tools-cache-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solmos/test-tools-cache-action/issues"
+  },
+  "homepage": "https://github.com/solmos/test-tools-cache-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/tool-cache": "^2.0.1"
+  }
+}
