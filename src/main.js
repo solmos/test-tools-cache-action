@@ -25,6 +25,9 @@ async function getNode12() {
 
   const cachedPath = await tc.cacheDir(extractedPath, 'node', '12.7.0');
   core.addPath(cachedPath);
+
+  const allNodeVersions = tc.findAllVersions('node');
+  console.log(`Versions of node available: ${allNodeVersions}`);
 }
 
 run();
