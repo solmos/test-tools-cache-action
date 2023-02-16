@@ -15,7 +15,7 @@ async function getNode12() {
 
   try {
     console.log('Download node12 tar');
-    const downloadPath = await tc.downloadTool(downloadPath);
+    const downloadPath = await tc.downloadTool(downloadUrl);
   } catch (error) {
     throw new Error(`Failed to download Node12: ${error}`);
   }
