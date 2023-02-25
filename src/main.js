@@ -10,7 +10,7 @@ async function run() {
   }
 }
 
-export function setupExercism() {
+async function setupExercism() {
   let toolPath = tc.find('exercism', '3.1.0');
 
   if (toolPath) {
