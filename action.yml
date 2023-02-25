@@ -1,5 +1,9 @@
 name: 'Setup exercism CLI'
 description: 'Test action for downloading and caching exercism CLI binary'
+inputs:
+  token:
+    description: 'Exercism token'
+    required: true
 runs:
   using: 'node16'
   main: 'src/main.js'
