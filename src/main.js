@@ -3,14 +3,14 @@ const tc = require('@actions/tool-cache');
 
 async function run() {
   try {
-    await getNode12();
+    await getExercism();
   } catch (error) {
     core.setFailed(`Action failed with error ${error}`);
   }
 }
 
-async function getNode12() {
-  const downloadUrl = 'https://nodejs.org/dist/v12.7.0/node-v12.7.0-linux-x64.tar.gz';
+async function getExercism() {
+  const downloadUrl = 'https://github.com/exercism/cli/releases/download/v3.1.0/exercism-3.1.0-linux-x86_64.tar.gz';
   // const tempDir = process.env['RUNNER_TEMP'];
 
   // try {
@@ -23,11 +23,11 @@ async function getNode12() {
   const downloadPath = await tc.downloadTool(downloadUrl);
   const extractedPath = await tc.extractTar(downloadPath);
 
-  const cachedPath = await tc.cacheDir(extractedPath, 'node', '12.7.0');
+  const cachedPath = await tc.cacheDir(extractedPath, 'exercism', '3.1.0');
   core.addPath(cachedPath);
 
-  const allNodeVersions = tc.findAllVersions('node');
-  console.log(`Versions of node available: ${allNodeVersions}`);
+  const allVersions = tc.findAllVersions('exercism');
+  console.log(`Versions of exercism available: ${allVersions}`);
 }
 
 run();
