@@ -1,5 +1,5 @@
-name: 'Download test'
-description: 'Test action for downloading and caching a file'
+name: 'Setup exercism CLI'
+description: 'Test action for downloading and caching exercism CLI binary'
 runs:
   using: 'node16'
   main: 'src/main.js'
