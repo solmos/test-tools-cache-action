@@ -1,10 +1,14 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  setup-exercism:
     runs-on: ubuntu-latest
-    name: A job to download node
+    name: A job to download exercism
     steps:
       - uses: actions/checkout@v3
-      - uses: ./
-      - run: node --version
+      - name: Set up exercism
+        uses: ./
+      - name: List files in working directory
+        run: ls -a
+      - name: Check exercism
+        run: exercism
